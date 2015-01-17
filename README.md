@@ -44,7 +44,7 @@ try {
 }
 ```
 
-Promise give you back a nicer way to compose async functions.
+Promises give you back a nicer way to compose async functions.
 
 An exercise for you. Write some code to talk to an API over HTTP in JavaScript. Here's the API:
 
