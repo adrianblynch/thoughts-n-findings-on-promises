@@ -48,21 +48,18 @@ Promises give you back a nicer way to compose async functions.
 
 An exercise for you. Write some code to talk to an API over HTTP in JavaScript. Here's the API:
 
-```
 POST /a {name: 'a'}
 POST /b {name: 'b'}
 POST /c {name: 'c'}
 POST /d {name: 'd'}
 POST /e {name: 'e'}
-```
 
-You test must create a through to e by posting the respective payload to the corresponding route, /a through to /e.
+Your test must create resources 'a' through to 'e' by posting the respective payload to the corresponding route, /a through to /e.
 
 You can't post to /b until you've received the response from posting to /a, you can't post to /c until you've receieved the response from posting to /b, etc.
 
 With callbacks:
 
-```
 post('a', function(err, result) {
 		post('b', function(err, result) {
 				post('c', function(err, result) {
@@ -73,7 +70,6 @@ post('a', function(err, result) {
 				})
 		})
 })
-```
 
 Nice!
 
@@ -85,7 +81,6 @@ How was that for you?
 
 With promises however:
 
-```
 function postPromise(route) {
 	return new Promise(function(resolve, reject) {
 		post(route, function(err, result) {
@@ -112,6 +107,7 @@ Promise
 	return post('e')
 })
 .catch(function() {
-	
+
 })
-```
+
+Now change the tests as mentioned above. No so bad eh?
