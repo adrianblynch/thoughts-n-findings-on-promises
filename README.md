@@ -81,6 +81,7 @@ How was that for you?
 
 With promises however:
 
+```
 function postPromise(route) {
 	return new Promise(function(resolve, reject) {
 		post(route, function(err, result) {
@@ -109,5 +110,6 @@ Promise
 .catch(function() {
 
 })
+```
 
 Now change the tests as mentioned above. No so bad eh?
