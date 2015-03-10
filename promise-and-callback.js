@@ -18,12 +18,12 @@ function both(firstName, lastName, callback) {
 
 	if (callback) {
 
-		work()(callback)
+		generateAsyncWork()(callback)
 
 	} else {
 
 		return new Promise(function(resolve) {
-			work()(resolve)
+			generateAsyncWork()(resolve)
 		})
 
 	}
